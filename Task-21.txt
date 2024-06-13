@@ -21,17 +21,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class HelloPeople {
 	public static void main(String[] args) {
 		
-		ChromeDriver driver=new ChromeDriver();
+			ChromeDriver driver=new ChromeDriver();
 		
-		driver.manage().window().maximize();
+			driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
-		driver.get("https://the-internet.herokuapp.com/iframe");
+			driver.get("https://the-internet.herokuapp.com/iframe");
 	        
-	    	driver.findElement(By.xpath("//button[@class='tox-notification__dismiss tox-button tox-button--naked tox-button--icon']")).click();
+	    		driver.findElement(By.xpath("//button[@class='tox-notification__dismiss tox-button tox-button--naked tox-button--icon']")).click();
 	    
-	    	WebElement iframe = driver.findElement(By.xpath("//*[@id=\"mce_0_ifr\"]"));
+	    		WebElement iframe = driver.findElement(By.xpath("//*[@id=\"mce_0_ifr\"]"));
         
         		driver.switchTo().frame(iframe);
         
